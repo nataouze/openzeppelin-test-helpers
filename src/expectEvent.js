@@ -149,16 +149,16 @@ function contains (args, key, value) {
   if (value === null) {
     expect(args[key]).to.equal(null,
       `expected event argument '${key}' to be null but got ${args[key]}`);
-  } else if (isBN(args[key]) || isBN(value)) {
-    const actual = isBN(args[key]) ? args[key].toString() : args[key];
-    const expected = isBN(value) ? value.toString() : value;
-    expect(args[key]).to.be.bignumber.equal(value,
-      `expected event argument '${key}' to have value ${expected} but got ${actual}`);
+  } else if (isBN(args[key])) {
+    const actual = args[key];
+    const expected = isBN(value) ? value : new BN(value);
+    expect(actual).to.be.bignumber.equal(expected,
+      `expected event argument '${key}' to have value ${expected.toString()} but got ${actual.toString()}`);
   } else if (Array.isArray(args[key]) && isBN(args[key][0])) {
     args[key].forEach((arg, index) => {
-      const actual = arg.toString();
-      const expected = isBN(value[index]) ? value[index].toString() : value[index];
-      expect(actual).to.be.equal(expected,
+      const actual = arg;
+      const expected = isBN(value[index]) ? value[index] : new BN(value[index]);
+      expect(actual).to.be.bignumber.equal(expected,
         `expected event argument '${key}[${index}]' to have value ${expected} but got ${actual}`);
     });
   } else {
