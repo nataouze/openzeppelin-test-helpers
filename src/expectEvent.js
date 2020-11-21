@@ -154,6 +154,13 @@ function contains (args, key, value) {
     const expected = isBN(value) ? value.toString() : value;
     expect(args[key]).to.be.bignumber.equal(value,
       `expected event argument '${key}' to have value ${expected} but got ${actual}`);
+  } else if (Array.isArray(args[key]) && isBN(args[key][0])) {
+    forEach(args[key], (arg, index) => {
+      const actual = arg.toString();
+      const expected = isBN(value[index]) ? value[index].toString() : value[index];
+      expect(actual).to.be.equal(expected,
+        `expected event argument '${key}[${index}]' to have value ${expected} but got ${actual}`);
+    });
   } else {
     expect(args[key]).to.be.deep.equal(value,
       `expected event argument '${key}' to have value ${value} but got ${args[key]}`);
