@@ -149,12 +149,12 @@ function contains (args, key, value) {
   if (value === null) {
     expect(args[key]).to.equal(null,
       `expected event argument '${key}' to be null but got ${args[key]}`);
-  } else if (isBN(args[key])) {
-    const actual = args[key];
+  } else if (isBN(args[key]) || isBN(value) || Number.isInteger(value)) {
+    const actual = isBN(args[key])? args[key]: new BN(args[key]);
     const expected = isBN(value) ? value : new BN(value);
     expect(actual).to.be.bignumber.equal(expected,
       `expected event argument '${key}' to have value ${expected.toString()} but got ${actual.toString()}`);
-  } else if (Array.isArray(args[key]) && isBN(args[key][0])) {
+  } else if (Array.isArray(args[key]) && (isBN(args[key][0]) || isBN(value[0]) || Number.isInteger(value[0]))) {
     args[key].forEach((arg, index) => {
       const actual = arg;
       const expected = isBN(value[index]) ? value[index] : new BN(value[index]);
