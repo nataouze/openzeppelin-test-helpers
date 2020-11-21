@@ -155,7 +155,7 @@ function contains (args, key, value) {
     expect(args[key]).to.be.bignumber.equal(value,
       `expected event argument '${key}' to have value ${expected} but got ${actual}`);
   } else if (Array.isArray(args[key]) && isBN(args[key][0])) {
-    forEach(args[key], (arg, index) => {
+    args[key].forEach((arg, index) => {
       const actual = arg.toString();
       const expected = isBN(value[index]) ? value[index].toString() : value[index];
       expect(actual).to.be.equal(expected,
