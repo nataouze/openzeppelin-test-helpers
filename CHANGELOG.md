@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.12 (2021-07-05)
+ * Added new `snapshot` module to capture and revert blockchain state.
+
+## 0.5.11 (2021-04-29)
+ * Fixed `expectRevert` for latest versions of Hardhat.
+
 ## 0.5.10 (2020-12-22)
  * Updated `@truffle/contract` dependency.
 
