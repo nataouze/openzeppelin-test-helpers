@@ -5,7 +5,7 @@ const { ZERO_ADDRESS, ZERO_BYTES32 } = require('../../src/constants');
 
 const Constants = artifacts.require('Constants');
 
-contract('consants', function () {
+contract('constants', function () {
   beforeEach(async function () {
     this.constants = await Constants.new();
   });
