@@ -34,7 +34,7 @@ contract('send', function ([sender, receiver]) {
       this.acknowledger = await Acknowledger.new();
       const receipt = await send.ether(sender, this.acknowledger.address, 0);
       await expectEvent.inTransaction(
-        receipt.transactionHash, Acknowledger, 'AcknowledgeFallback'
+        receipt.transactionHash, Acknowledger, 'AcknowledgeFallback',
       );
     });
   });
@@ -66,7 +66,7 @@ contract('send', function ([sender, receiver]) {
       it('calls overloaded functions with more arguments', async function () {
         const receipt = await send.transaction(this.acknowledger, 'bar', 'uint256,uint256', [3, 5], opts);
         await expectEvent.inTransaction(
-          receipt.transactionHash, Acknowledger, 'AcknowledgeBarDouble', { a: '3', b: '5' }
+          receipt.transactionHash, Acknowledger, 'AcknowledgeBarDouble', { a: '3', b: '5' },
         );
       });
 

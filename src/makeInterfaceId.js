@@ -8,7 +8,7 @@ function ERC165 (functionSignatures = []) {
     .map(h =>
       Buffer
         .from(h.substring(2), 'hex')
-        .slice(0, 4) // bytes4()
+        .slice(0, 4), // bytes4()
     )
     .reduce((memo, bytes) => {
       for (let i = 0; i < INTERFACE_ID_LENGTH; i++) {

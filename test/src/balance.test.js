@@ -15,7 +15,7 @@ contract('balance', function ([sender, receiver]) {
 
     it('returns the current balance of an account as a BN in a specified unit', async function () {
       expect(await balance.current(sender, 'ether')).to.be.bignumber.equal(
-        fromWei(await web3.eth.getBalance(sender), 'ether')
+        fromWei(await web3.eth.getBalance(sender), 'ether'),
       );
     });
   });
@@ -83,7 +83,7 @@ contract('balance', function ([sender, receiver]) {
 
         it('returns current balance in overridden unit', async function () {
           expect(await this.tracker.get(override)).to.be.bignumber.equal(
-            fromWei(await web3.eth.getBalance(sender), override)
+            fromWei(await web3.eth.getBalance(sender), override),
           );
         });
 

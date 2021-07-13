@@ -37,7 +37,7 @@ async function checkRevertReasonSupport (provider) {
 
     const warn = function (msg) {
       console.log(`\
-${colors.white.bgBlack('@openzeppelin/test-helpers')} ${colors.black.bgYellow('WARN')} expectRevert: ${msg}`
+${colors.white.bgBlack('@openzeppelin/test-helpers')} ${colors.black.bgYellow('WARN')} expectRevert: ${msg}`,
       );
     };
 
@@ -48,13 +48,13 @@ Assertions may yield false negatives!
 Revert reason checks are only known to work on Ganache >=2.2.0 and Hardhat, and the current node is ${nodeInfo}.
 
 If your node does support revert reasons, please let us know: \
-https://github.com/OpenZeppelin/openzeppelin-test-helpers/issues/new`
+https://github.com/OpenZeppelin/openzeppelin-test-helpers/issues/new`,
       );
     } else if (ganacheVersion !== null && !semver.gte(ganacheVersion[1], '2.2.0')) {
       throw new Error(`\
 The current version of Ganache (v${ganacheVersion[1]}) doesn't return revert reasons.
 
-Upgrade to v2.2.0 or newer, or use expectRevert.unspecified to skip the revert reason check.`
+Upgrade to v2.2.0 or newer, or use expectRevert.unspecified to skip the revert reason check.`,
       );
     }
 

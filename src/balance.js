@@ -6,6 +6,7 @@ class Tracker {
     this.account = acc;
     this.unit = unit;
   }
+
   async delta (unit = this.unit) {
     const current = await balanceCurrent(this.account);
     const delta = current.sub(this.prev);
@@ -13,6 +14,7 @@ class Tracker {
 
     return new BN(fromWei(delta, unit));
   }
+
   async get (unit = this.unit) {
     this.prev = await balanceCurrent(this.account);
 

@@ -4,7 +4,7 @@ const { setSingletonsConfig } = require('./src/config/singletons');
 const { deprecate } = require('util');
 
 const setEnvironment = deprecate((environment) => setSingletonsConfig({ abstraction: environment }),
-  'The \'environment\' configuration option is deprecated, use \'singletons.abstraction\' instead.'
+  'The \'environment\' configuration option is deprecated, use \'singletons.abstraction\' instead.',
 );
 
 let configLoaded = false;

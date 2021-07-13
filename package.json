@@ -39,25 +39,25 @@
   "dependencies": {
     "@openzeppelin/contract-loader": "^0.6.2",
     "@truffle/contract": "^4.3.24",
-    "ansi-colors": "^3.2.3",
-    "chai": "^4.2.0",
-    "chai-bn": "^0.2.1",
+    "ansi-colors": "^4.1.1",
+    "chai": "^4.3.4",
+    "chai-bn": "^0.2.2",
     "ethjs-abi": "^0.2.1",
     "lodash.flatten": "^4.4.0",
-    "semver": "^5.6.0",
-    "web3": "^1.2.5",
+    "semver": "^7.3.5",
+    "web3": "^1.4.0",
     "web3-utils": "^1.4.0"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-mocha-no-only": "^1.1.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "ganache-cli": "^6.5.0",
+    "eslint": "^7.30.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-mocha-no-only": "^1.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^4.1.0",
+    "ganache-cli": "^6.12.2",
     "openzeppelin-docs-utils": "github:OpenZeppelin/docs-utils",
-    "truffle": "^5.1.46"
+    "truffle": "^5.1.65"
   }
 }

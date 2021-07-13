@@ -150,7 +150,7 @@ function contains (args, key, value) {
     expect(args[key]).to.equal(null,
       `expected event argument '${key}' to be null but got ${args[key]}`);
   } else if (isBN(args[key]) || isBN(value) || Number.isInteger(value)) {
-    const actual = isBN(args[key])? args[key]: new BN(args[key]);
+    const actual = isBN(args[key]) ? args[key] : new BN(args[key]);
     const expected = isBN(value) ? value : new BN(value);
     expect(actual).to.be.bignumber.equal(expected,
       `expected event argument '${key}' to have value ${expected.toString()} but got ${actual.toString()}`);
@@ -198,11 +198,11 @@ expectEvent.notEmitted.inTransaction = notInTransaction;
 expectEvent.not = {};
 expectEvent.not.inConstruction = deprecate(
   notInConstruction,
-  'expectEvent.not is deprecated. Use expectEvent.notEmitted instead.'
+  'expectEvent.not is deprecated. Use expectEvent.notEmitted instead.',
 );
 expectEvent.not.inTransaction = deprecate(
   notInTransaction,
-  'expectEvent.not is deprecated. Use expectEvent.notEmitted instead.'
+  'expectEvent.not is deprecated. Use expectEvent.notEmitted instead.',
 );
 
 module.exports = expectEvent;

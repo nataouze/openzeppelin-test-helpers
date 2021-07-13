@@ -2,208 +2,208 @@
 
 const ERC1820_REGISTRY_ABI = [
   {
-    'constant': false,
-    'inputs': [
+    constant: false,
+    inputs: [
       {
-        'name': '_addr',
-        'type': 'address',
+        name: '_addr',
+        type: 'address',
       },
       {
-        'name': '_interfaceHash',
-        'type': 'bytes32',
+        name: '_interfaceHash',
+        type: 'bytes32',
       },
       {
-        'name': '_implementer',
-        'type': 'address',
+        name: '_implementer',
+        type: 'address',
       },
     ],
-    'name': 'setInterfaceImplementer',
-    'outputs': [],
-    'payable': false,
-    'stateMutability': 'nonpayable',
-    'type': 'function',
+    name: 'setInterfaceImplementer',
+    outputs: [],
+    payable: false,
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
-    'constant': true,
-    'inputs': [
+    constant: true,
+    inputs: [
       {
-        'name': '_addr',
-        'type': 'address',
+        name: '_addr',
+        type: 'address',
       },
     ],
-    'name': 'getManager',
-    'outputs': [
+    name: 'getManager',
+    outputs: [
       {
-        'name': '',
-        'type': 'address',
+        name: '',
+        type: 'address',
       },
     ],
-    'payable': false,
-    'stateMutability': 'view',
-    'type': 'function',
+    payable: false,
+    stateMutability: 'view',
+    type: 'function',
   },
   {
-    'constant': false,
-    'inputs': [
+    constant: false,
+    inputs: [
       {
-        'name': '_addr',
-        'type': 'address',
+        name: '_addr',
+        type: 'address',
       },
       {
-        'name': '_newManager',
-        'type': 'address',
+        name: '_newManager',
+        type: 'address',
       },
     ],
-    'name': 'setManager',
-    'outputs': [],
-    'payable': false,
-    'stateMutability': 'nonpayable',
-    'type': 'function',
+    name: 'setManager',
+    outputs: [],
+    payable: false,
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
-    'constant': true,
-    'inputs': [
+    constant: true,
+    inputs: [
       {
-        'name': '_interfaceName',
-        'type': 'string',
+        name: '_interfaceName',
+        type: 'string',
       },
     ],
-    'name': 'interfaceHash',
-    'outputs': [
+    name: 'interfaceHash',
+    outputs: [
       {
-        'name': '',
-        'type': 'bytes32',
+        name: '',
+        type: 'bytes32',
       },
     ],
-    'payable': false,
-    'stateMutability': 'pure',
-    'type': 'function',
+    payable: false,
+    stateMutability: 'pure',
+    type: 'function',
   },
   {
-    'constant': false,
-    'inputs': [
+    constant: false,
+    inputs: [
       {
-        'name': '_contract',
-        'type': 'address',
+        name: '_contract',
+        type: 'address',
       },
       {
-        'name': '_interfaceId',
-        'type': 'bytes4',
+        name: '_interfaceId',
+        type: 'bytes4',
       },
     ],
-    'name': 'updateERC165Cache',
-    'outputs': [],
-    'payable': false,
-    'stateMutability': 'nonpayable',
-    'type': 'function',
+    name: 'updateERC165Cache',
+    outputs: [],
+    payable: false,
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
-    'constant': true,
-    'inputs': [
+    constant: true,
+    inputs: [
       {
-        'name': '_addr',
-        'type': 'address',
+        name: '_addr',
+        type: 'address',
       },
       {
-        'name': '_interfaceHash',
-        'type': 'bytes32',
-      },
-    ],
-    'name': 'getInterfaceImplementer',
-    'outputs': [
-      {
-        'name': '',
-        'type': 'address',
+        name: '_interfaceHash',
+        type: 'bytes32',
       },
     ],
-    'payable': false,
-    'stateMutability': 'view',
-    'type': 'function',
+    name: 'getInterfaceImplementer',
+    outputs: [
+      {
+        name: '',
+        type: 'address',
+      },
+    ],
+    payable: false,
+    stateMutability: 'view',
+    type: 'function',
   },
   {
-    'constant': true,
-    'inputs': [
+    constant: true,
+    inputs: [
       {
-        'name': '_contract',
-        'type': 'address',
+        name: '_contract',
+        type: 'address',
       },
       {
-        'name': '_interfaceId',
-        'type': 'bytes4',
-      },
-    ],
-    'name': 'implementsERC165InterfaceNoCache',
-    'outputs': [
-      {
-        'name': '',
-        'type': 'bool',
+        name: '_interfaceId',
+        type: 'bytes4',
       },
     ],
-    'payable': false,
-    'stateMutability': 'view',
-    'type': 'function',
+    name: 'implementsERC165InterfaceNoCache',
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    payable: false,
+    stateMutability: 'view',
+    type: 'function',
   },
   {
-    'constant': true,
-    'inputs': [
+    constant: true,
+    inputs: [
       {
-        'name': '_contract',
-        'type': 'address',
+        name: '_contract',
+        type: 'address',
       },
       {
-        'name': '_interfaceId',
-        'type': 'bytes4',
-      },
-    ],
-    'name': 'implementsERC165Interface',
-    'outputs': [
-      {
-        'name': '',
-        'type': 'bool',
+        name: '_interfaceId',
+        type: 'bytes4',
       },
     ],
-    'payable': false,
-    'stateMutability': 'view',
-    'type': 'function',
+    name: 'implementsERC165Interface',
+    outputs: [
+      {
+        name: '',
+        type: 'bool',
+      },
+    ],
+    payable: false,
+    stateMutability: 'view',
+    type: 'function',
   },
   {
-    'anonymous': false,
-    'inputs': [
+    anonymous: false,
+    inputs: [
       {
-        'indexed': true,
-        'name': 'addr',
-        'type': 'address',
+        indexed: true,
+        name: 'addr',
+        type: 'address',
       },
       {
-        'indexed': true,
-        'name': 'interfaceHash',
-        'type': 'bytes32',
+        indexed: true,
+        name: 'interfaceHash',
+        type: 'bytes32',
       },
       {
-        'indexed': true,
-        'name': 'implementer',
-        'type': 'address',
+        indexed: true,
+        name: 'implementer',
+        type: 'address',
       },
     ],
-    'name': 'InterfaceImplementerSet',
-    'type': 'event',
+    name: 'InterfaceImplementerSet',
+    type: 'event',
   },
   {
-    'anonymous': false,
-    'inputs': [
+    anonymous: false,
+    inputs: [
       {
-        'indexed': true,
-        'name': 'addr',
-        'type': 'address',
+        indexed: true,
+        name: 'addr',
+        type: 'address',
       },
       {
-        'indexed': true,
-        'name': 'newManager',
-        'type': 'address',
+        indexed: true,
+        name: 'newManager',
+        type: 'address',
       },
     ],
-    'name': 'ManagerChanged',
-    'type': 'event',
+    name: 'ManagerChanged',
+    type: 'event',
   },
 ];
 
